@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+    *Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo informar su suma 
+    y diferencia, en caso contrario informar el producto y la división del primero respecto al segundo.
+
+    *Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 4 mostrar un mensaje 'regular', 
+    sino 'reprobado'.
+
+    *Se ingresa por teclado un número positivo de uno o dos dígitos (1..99) mostrar un mensaje indicando si el 
+    número tiene uno o dos dígitos 
+-->
+<head>
+    <title>Problema 6</title>
+</head>
+<body>
+    
+    <script>
+        //Primera parte
+        let i=parseInt(prompt("Ingrese el primer numero"));
+        let j=parseInt(prompt("Ingrese el segundo numero"));
+        if(i>j){
+            document.write("La suma de "+i+" + "+j+" es: "+(i+j)+"<br>");
+            document.write("La diferencia de "+i+" - "+j+" es: "+(i-j)+"<br>");
+        }
+        else{
+            document.write("El producto de "+i+" * "+j+" es: "+(i*j)+"<br>");
+            document.write("El cociente de "+i+" / "+j+" es: "+(i/j)+"<br>");   
+        }
+
+        //Segunda parte
+        confirm("Va ingresar 3 notas del estudiante");
+        let nota1=parseInt(prompt("Ingrese la primera nota"));
+        let nota2=parseInt(prompt("Ingrese la segunda nota"));
+        let nota3=parseInt(prompt("Ingrese la tercera nota"));
+        let promedio=(nota1+nota2+nota3)/3;
+        if(promedio>=4){
+            document.write("regular");
+        }
+        else{
+            document.write("reprobado");
+        }
+        document.write("<br>");
+
+         //Tercera parte
+        let num=prompt("Ingrese un numero");
+        document.write("El numero tiene "+num.length+" digitos<br>");
+    </script>
+</body>
+</html>

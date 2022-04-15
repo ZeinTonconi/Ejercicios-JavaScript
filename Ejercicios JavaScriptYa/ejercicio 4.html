@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+    *Realizar la carga del lado de un cuadrado, mostrar por pantalla el perímetro del mismo 
+    *Escribir un programa en el cual se ingresen cuatro números, 
+    calcular e informar la suma de los dos primeros y el producto del tercero y el cuarto.
+    *Realizar un programa que lea cuatro valores numéricos e informar su suma y producto.
+    *Se debe desarrollar un programa que pida el ingreso del precio de un artículo y la 
+    cantidad que lleva el cliente. Mostrar lo que debe abonar el comprador
+-->
+<head>
+    <title>Problema 4</title>
+</head>
+<body>
+    
+    <script>
+        //Primera parte
+        let lado=parseInt(prompt("Ingrese la medida del lado del cuadrado"));
+        lado *= 4;
+        document.write("El perimetro del cuadrado es: " + lado + "<br>");
+        
+        //Segunda parte
+        let a,b,c,d;
+        confirm("Va ingresar cuatro numeros enteros");
+        a=parseInt(prompt("Ingrese el primer numero"));
+        b=parseInt(prompt("Ingrese el segundo numero"));
+        c=parseInt(prompt("Ingrese el tercer numero"));
+        d=parseInt(prompt("Ingrese el cuarto numero"));
+        document.write("La suma de "+a+" + "+b+" es igual a "+(a+b)+"<br>");
+        document.write("El producto de "+c+" * "+d+" es igual a "+(c*d)+"<br>");
+        
+        //Tercera parte
+        confirm("Va ingresar cuatro numeros enteros");
+        a=parseInt(prompt("Ingrese el primer numero"));
+        b=parseInt(prompt("Ingrese el segundo numero"));
+        c=parseInt(prompt("Ingrese el tercer numero"));
+        d=parseInt(prompt("Ingrese el cuarto numero"));
+        document.write("La suma de "+a+" + "+b+" + "+c+" + "+d+" es igual a "+(a+b+c+d)+"<br>");
+        document.write("El producto de "+a+" * "+b+" * "+c+" * "+d+" es igual a "+(a*b*c*d)+"<br>");
+
+        //Cuarta parte
+        let precio=parseInt(prompt("Cual es el precio del articulo individual?"));
+        let cantidad=parseInt(prompt("Cuantos productos lleva el cliente?"))
+        document.write("Debe pagar un total de: "+(precio*cantidad));
+    </script>
+</body>
+</html>

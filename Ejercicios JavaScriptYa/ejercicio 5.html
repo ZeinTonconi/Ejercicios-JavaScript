@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+    *Se ingresan tres notas de un alumno, si el promedio es mayor o igual a siete mostrar el mensaje 'Promocionado'. 
+    *Solicitar que se ingrese dos veces una clave. Mostrar un mensaje si son iguales
+-->
+<head>
+    <title>Problema 5</title>
+</head>
+<body>
+    
+    <script>
+        //Primera parte
+        confirm("Va ingresar 3 notas del estudiante");
+        let nota1=parseInt(prompt("Ingrese la primera nota"));
+        let nota2=parseInt(prompt("Ingrese la segunda nota"));
+        let nota3=parseInt(prompt("Ingrese la tercera nota"));
+        let promedio=(nota1+nota2+nota3)/3;
+        if(promedio>=7){
+            document.write("Promocionado");
+        }
+        else{
+            document.write("Reprobado");
+        }
+        document.write("<br>");
+        //Segunda parte
+        let pass1=prompt("Ingrese su contrasenna");
+        let pass2=prompt("Vuelva a ingresar su contrasenna");
+        if(pass1==pass2){
+            document.write("Son iguales!!");
+        }
+        else{
+            document.write("Infiltrado!!");
+        }
+        document.write("<br>");
+    </script>
+</body>
+</html>

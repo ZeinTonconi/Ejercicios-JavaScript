@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+    Se ingresan tres valores por teclado, si todos son iguales se imprime la suma del primero con el 
+    segundo y a este resultado se lo multiplica por el tercero
+-->
+<head>
+    <title>Ejercicio 8 - Problema 2</title>
+</head>
+<body>
+    
+    <script>
+        let a=parseInt(prompt("Ingrese el primer valor"));
+        let b=parseInt(prompt("Ingrese el segundo valor"));
+        let c=parseInt(prompt("Ingrese el tercer valor"));
+        if(a==b && b==c){
+            document.write("El resultado es: " + 2*a*a);
+        }
+        else{
+            document.write("No son iguales");
+        }
+        document.write("<br>")
+    </script>
+</body>
+</html> 

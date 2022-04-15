@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--
+    Se ingresan un conjunto de 5 alturas de personas por teclado. Mostrar la altura promedio de las personas.
+-->
+<head>
+    <title>Ejercicio 12 - Problema 2</title>
+</head>
+<body>
+    
+    <script>    
+        let prom=0;
+        for(let i=0;i<5;i++){
+            let a=parseInt(prompt("Cual es la altura de la persona?"));
+            prom+=a;
+        }
+        prom/=5;
+        document.write("La altura promedio es: "+prom);    
+    </script>
+</body>
+</html> 

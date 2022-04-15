@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+    Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas mayores o 
+    iguales a 7 y cuántos menores.
+-->
+<head>
+    <title>Ejercicio 12 - Problema 1</title>
+</head>
+<body>
+    
+    <script>    
+        let cont=0;
+        for(let i=0;i<10;i++){
+            let a=parseInt(prompt("Cual es la nota del alumno?"));
+            if(a>=7)
+                cont++;
+        }
+        document.write(cont+" tienen notas mayores o igual a 7 y "+(10-cont)+" tienen notas menores a 7<br>");
+    </script>
+</body>
+</html> 
