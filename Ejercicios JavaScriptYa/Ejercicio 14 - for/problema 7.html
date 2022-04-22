@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+    Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+    a) La cantidad de valores negativos ingresados.
+    b) La cantidad de valores positivos ingresados.
+    c) La cantidad de múltiplos de 15.
+    d) El valor acumulado de los números ingresados que son pares.
+-->
+<head>
+    <title>Ejercicio 14 - Problema 7</title>
+</head>
+<body>
+    
+    <script>
+        let po=0,ne=0,m15=0,sum=0;
+        for(let i=0;i<10;i++){
+            let a=parseInt(prompt("Ingrese un numero"));
+            if(a>0)
+                po++;    
+            if(a<0)
+                ne++;
+            if(a%15==0)
+                m15++;
+            if(a%2==0)
+                sum+=a;
+        }
+        document.write("Existen "+po+" numeros positvos<br>");
+        document.write("Existen "+ne+" numeros negativos<br>");
+        document.write("Existen "+m15+" numeros multiplos de 15<br>");
+        document.write("La suma de numeros pares es: "+sum+"<br>");
+   </script>
+</body>
+</html>    

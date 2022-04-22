@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+    Escribir un programa que pida ingresar coordenadas (x,y) que representan puntos en el plano. 
+    Informar cuántos puntos se han ingresado en el primer, segundo, tercer y cuarto cuadrante. 
+    Al comenzar el programa se pide que se ingrese la cantidad de puntos a procesar.
+-->
+<head>
+    <title>Ejercicio 14 - Problema 6</title>
+</head>
+<body>
+    
+    <script>
+        let n=parseInt(prompt("Puntos a procesar:"));
+        let c1=0,c2=0,c3=0,c4=0;
+        for(let i=0;i<n;i++){
+            let x=parseInt(prompt("Coordenada x del punto "+i));
+            let y=parseInt(prompt("Coordenada y del punto "+i));
+            if(x>0 && y>0)
+                c1++;
+            if(x<0 && y>0)
+                c2++;
+            if(x<0 && y<0)
+                c3++;
+            if(x>0 && y<0)
+                c4++;
+        }
+        document.write("Existen "+c1+" puntos en el primer cuadrante<br>");
+        document.write("Existen "+c2+" puntos en el segundo cuadrante<br>");
+        document.write("Existen "+c3+" puntos en el tercer cuadrante<br>");
+        document.write("Existen "+c4+" puntos en el cuarto cuadrante<br>");
+   </script>
+</body>
+</html>    

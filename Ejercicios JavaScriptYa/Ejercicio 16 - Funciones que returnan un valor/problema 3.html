@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+    Desarrollar una función que retorne la cantidad de dígitos que tiene una variable entera 
+    positiva de hasta 5 dígitos.
+-->
+<head>
+    <title>Ejercicio 16 - Problema 3</title>
+</head>
+<body>
+    
+    <script>
+        function cantDigitos(x){
+            let c=0;
+            while(x!=0){
+                x=parseInt(x/10);
+                c++;
+            }
+            return c;
+        }
+        
+        let num=parseInt(prompt("Ingrese un numero"));
+        document.write("Tiene "+cantDigitos(num)+" digitos<br>");
+   </script>
+</body>
+</html>    

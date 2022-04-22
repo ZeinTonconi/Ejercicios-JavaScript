@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+    Confeccionar un programa que muestre en que cuatrimestre del año nos encontramos.
+-->
+<head>
+    <title>Ejercicio 17 - Problema 1</title>
+</head>
+<body>
+    
+    <script>
+        let fecha = new Date();
+        let mes = fecha.getMonth();
+        if(parseInt(mes/4)===0)
+            document.write("Primer cuatrimestre");
+        if(parseInt(mes/4)==1)
+            document.write("Segundo cuatrimestre");
+        if(parseInt(mes/4)==2)
+            document.write("Tercer cuatrimestre");
+        if(parseInt(mes/4)==3)
+            document.write("Cuarto cuatrimestre");
+   </script>
+</body>
+</html>    

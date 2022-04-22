@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+    Realizar un programa que permita cargar dos listas 
+    de 3 valores cada una. Informar con un mensaje cual 
+    de las dos listas tiene un valor acumulado mayor 
+    (mensajes 'Lista 1 mayor', 'Lista 2 mayor', 'Listas iguales')
+-->
+<head>
+    <title>Ejercicio 12 - Problema 6</title>
+</head>
+<body>
+    
+    <script>
+        let maxi1=Number.MIN_VALUE;
+        confirm("Numeros de la primera lista");
+        for(let i=0;i<3;i++){
+            let a=parseInt(prompt("Ingrese un numero"));
+            if(maxi1<a)
+                maxi1=a;
+        }
+        confirm("Numeros de la seguna lista");
+        let maxi2=Number.MIN_VALUE;
+        for(let i=0;i<3;i++){
+            let a=parseInt(prompt("Ingrese un numero"));
+            if(maxi2<a)
+                maxi2=a;
+        }
+        if(maxi1>maxi2){
+            document.write("Lista 1 mayor<br>");
+        }
+        else{
+            if(maxi2>maxi1){
+                document.write("Lista 2 mayor<br>");
+            }
+            else{
+                document.write("Listas iguales");
+            }
+        }
+    </script>
+</body>
+</html>    

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+    Confeccionar una función que nos retorne un string con el siguiente formato:
+    Hoy es Lunes 9 de Agosto de 2021
+-->
+<head>
+    <title>Ejercicio 17 - Problema 2</title>
+</head>
+<body>
+    
+    <script>
+        function obtenerDia(date){
+            let dia=date.getDay();
+            let men="Hoy es ";
+            dia--;
+            if(dia==0)
+                men+="Lunes";
+            else if(dia==1)
+                men+="Martes";
+            else if(dia==2)
+                men+="Miercoles";
+            else if(dia==3)
+                men+="Jueves";
+            else if(dia==4)
+                men+="Viernes";
+            else if(dia==5)
+                men+="Sabado";
+            else 
+                men+="Domingo";
+            men+=" "+date.getDate()+" de ";
+            let mes=["Enero","F","Marzo","Abril","Mayo","Junio","Julio","Agosto","S","O","N","D"];
+            men+=mes[date.getMonth()]+" de ";
+            men+=date.getFullYear()+" <br> ";
+            return men;
+        }
+
+        document.write(obtenerDia(new Date()));
+   </script>
+</body>
+</html>    

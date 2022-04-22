@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+    Desarrollar un programa que solicite la carga de 10 números e imprima la suma de lo últimos 
+    5 valores ingresados.
+-->
+<head>
+    <title>Ejercicio 14 - Problema 2</title>
+</head>
+<body>
+    
+    <script>
+        let sum=0;
+        for(let i=0;i<10;i++){
+            let n=parseInt(prompt("Ingrese un numero: "));
+            if(i>=5)
+                sum+=n;
+        }
+        document.write("La suma de los ultimos 5 numeros es: "+sum+"<br>");
+    </script>
+</body>
+</html>    

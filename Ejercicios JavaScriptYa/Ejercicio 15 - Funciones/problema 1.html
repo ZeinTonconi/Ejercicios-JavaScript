@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+    Confeccionar una función que solicite la carga de dos enteros (primero el menor y luego el mayor) 
+    y nos muestre desde el menor hasta el mayor de uno en uno.
+    Por ejemplo si ingresamos los valores 4 y 10 luego se debe mostrar por pantalla:
+    4 5 6 7 8 9 10
+-->
+<head>
+    <title>Ejercicio 15 - Problema 1</title>
+</head>
+<body>
+    
+    <script>
+        function rango(l,r){
+            for(let i=l;i<=r;i++){
+                document.write(i+" ");
+            }
+            document.write("<br>");
+        }
+        let l=parseInt(prompt("Introduce un numero"));
+        let r=parseInt(prompt("Ingrese un numero mayor al anterior"));
+        rango(l,r);
+   </script>
+</body>
+</html>    

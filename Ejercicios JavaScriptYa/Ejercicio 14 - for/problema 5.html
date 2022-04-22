@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+    Realizar un programa que lea los lados de 4 triángulos, e informar:
+    a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales), 
+    isósceles (dos lados iguales), o escaleno (ningún lado igual)
+    b) Cantidad de triángulos de cada tipo.
+    c) Tipo de triángulo del que hay menor cantidad.
+-->
+<head>
+    <title>Ejercicio 14 - Problema 5</title>
+</head>
+<body>
+    
+    <script>
+        let eq=0,is=0,es=0;
+        for(let i=1;i<=4;i++){
+            let a,b,c;
+            a=parseInt(prompt("Ingrese el lado del triangulo "+i));
+            b=parseInt(prompt("Ingrese el lado del triangulo "+i));
+            c=parseInt(prompt("Ingrese el lado del triangulo "+i));
+            if(a==b && b==c){
+                eq++;
+                document.write("El triangulo "+i+" es equilatero<br>");
+            }
+            else{
+                if(a==b || b==c || a==c){
+                    is++;
+                    document.write("El triangulo "+i+" es isosceles<br>");
+                }
+                else{
+                    es++;
+                    document.write("El triangulo "+i+" es escaleno<br>");
+                }
+            }
+        }
+        document.write("Existen "+eq+" triangulos equilateros<br>");
+        document.write("Existen "+is+" triangulos isosceles<br>");
+        document.write("Existen "+es+" triangulos escalenos<br>");
+        if(eq<is && eq<es){
+            document.write("El triangulo equilatero esta en menor cantidad");
+        }
+        else{
+            if(is<eq && is<es){
+                document.write("El triangulo isosceles esta en menor cantidad");
+            }
+            else{
+                document.write("El triangulo escaleno esta en menor cantidad");
+            }
+        }
+   </script>
+</body>
+</html>    

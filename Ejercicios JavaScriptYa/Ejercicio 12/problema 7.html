@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--Desarrollar un programa que permita cargar 5 números 
+    enteros y luego nos informe cuántos valores fueron 
+    pares y cuántos impares.
+-->
+<head>
+    <title>Ejercicio 12 - Problema 7</title>
+</head>
+<body>
+    
+    <script>
+        let pares=0;
+        for(let i=0;i<5;i++){
+            let a=parseInt(prompt("Ingrese un numero"));
+            if(a%2==0)
+                pares++;
+        }
+        document.write("Existen "+pares+" nueros pares y "+(5-pares)+" numeros impares")
+    </script>
+</body>
+</html>    
