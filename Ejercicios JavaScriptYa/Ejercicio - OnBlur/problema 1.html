@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <!--
+    Solicitar que se ingrese el nombre y la clave de un usuario. Mostrar una ventana de alerta si en la 
+    clave se ingresan menos de 7 caracteres o más de 20 (capturar el evento onBlur)
+    -->
+<head>
+    <title>Problema 2 - Control SELECT</title>
+</head>
+<body>
+    <form>
+        <p>Nombre: <input type="text"  id="nombre"></p>
+        <p>Clave: <input type="password" id="password" onblur="comprobar(this)"></p>
+    </form>
+    <script>
+        function comprobar(texto){
+            if(texto.value.length<7 || texto.value.length>20){
+                alert("Debe tener entre 7 y 20 caracteres");
+                vaciar(texto);
+            }
+        }
+        function vaciar(texto){
+            texto.value="";
+        }
+    </script>
+</body>
+</html>

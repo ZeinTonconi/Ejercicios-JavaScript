@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Crear un objeto que represente los datos de un participante de un juego. Definir las propiedades
+        nombre
+        puntos
+        y los métodos:
+        imprimir (mostrar el nombre de jugador y los puntos actuales)
+        aumentarPuntos (permite incrementar la cantidad de puntos actuales del jugador)
+        verificarSiGano (mostrar un mensaje si los puntos superan a 1000)
+    -->
+<head>
+    <title>Problema 1 - Creacion de objetos literales</title>
+</head>
+<body>
+    <script>
+        let parti={
+            nombre:"Daner",
+            puntos:0,
+            imprimir: function(){
+                //() =>{
+                document.write(`Nombre: ${this.nombre}<br>Puntos: ${this.puntos}<br>`);
+            },
+            aumentarPuntos: function(x){
+                this.puntos+=x;
+            },
+            verificarSiGano: function(){
+                if(this.puntos>=1000)
+                    document.write("Ganaste<br>");
+                else document.write("Perdiste<br>");
+            }
+        };
+        parti.imprimir();
+        parti.aumentarPuntos(100);
+        parti.verificarSiGano();
+        parti.aumentarPuntos(900);
+        parti.verificarSiGano();
+    </script>
+</body>
+</html> 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Crear un programa que permita cargar un entero en un text y al presionar un botón 
+        nos muestre dicho valor elevado al cubo
+    -->
+<head>
+    <title>Problema 1 - Controles FORM, BUTTON y TEXT</title>
+</head>
+<body>
+    <form>
+        <p>Ingrese un numero<input type="text" id="numero1"></p>
+        <p><input type="button" value="Enviar" onclick="cubo()"></p>
+    </form>
+    <script>
+        function cubo(){
+            let n=document.getElementById("numero1").value;
+            alert("El cubo es: "+(n*n*n));
+        }
+    </script>
+</body>
+</html>

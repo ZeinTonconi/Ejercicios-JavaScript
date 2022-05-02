@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <!--
+    Crear un formulario con tres botones con las leyendas "1", "2" y "3". 
+    Mostrar un mensaje indicando qué botón se presionó.
+    -->
+<head>
+    <title>Problema 1 - Formularios y Eventos</title>
+</head>
+<body>
+    <form>
+        <input type="button" onClick="evento1()" value="evento1">
+        <input type="button" onclick="evento2()" value="evento2">
+        <input type="button" onclick="evento3()" value="evento3">
+    </form>
+
+    <script>
+        function evento1(){
+            //alert("Se presiono el boton 1");
+            // console.log(document);
+            // document.open();
+            // document.write("Se presiono el boton 1<br>");
+            // document.close();
+            // console.log(document);
+            // document.write("Se pone debajo<br>");
+            // console.log(document);
+            // document.write("<input type=button onclick='evento2()' value=hi!>");
+            // document.close();
+            // console.log(document);
+            setTimeout(()=>{
+                console.log(1000);
+            },1000);
+            setTimeout(()=>{
+                console.log(0);
+            },0);
+            setTimeout(()=>{
+                console.log(2000);
+            },2000);
+            setTimeout(()=>{
+                console.log(3000);
+            },3000);
+            console.log("Se acabo el script");
+        }
+        function evento2(){
+            //alert("Se presiono el boton 2");
+            document.write("Se presiono el boton 2<br>");
+        }
+        function evento3(){
+            alert("Se presiono el boton 3");
+            //document.write("Se presiono el boton 3<br>");
+        }
+    </script>
+</body>
+</html>

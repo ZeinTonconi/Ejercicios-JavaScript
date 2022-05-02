@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Confeccionar una clase llamada suma, que contenga dos atributos (valor1, valor2) y 
+        tres métodos: cargarvalor1, cargarvalor2 y retornarresultado.
+    -->
+<head>
+    <title>Problema 1 - Programación orientada a objetos</title>
+</head>
+<body>
+    <script>
+        class suma{
+            constructor(){
+                this.x=0;
+                this.y=0;
+            }
+            primerValor(a){
+                this.x=a;
+            }
+            segundoValor(b){
+                this.y=b;
+            }
+            retornarResultado(){
+                return this.x+this.y;
+            }
+        }
+        let s=new suma();
+        s.primerValor(5);
+        s.segundoValor(11);
+        document.write(s.retornarResultado());
+    </script>
+</body>
+</html>

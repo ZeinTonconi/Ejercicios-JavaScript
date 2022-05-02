@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <!--    
+    Crear un vector con una lista de valores. Luego borrar las componentes donde hay un 2 y 
+    al mismo tiempo insertar dos elementos con el valor 1.
+    -->
+<head>
+    <title>Problema 1 - Array: splice</title>
+</head>
+<body>
+    <script>
+        let vec=new Array(2,3,2,1,1,4,4,2);
+        for(let i=0;i<vec.length;i++){
+            if(vec[i]===2){
+                vec.splice(i,1,1,1);
+            }
+        }
+        (vec).forEach(element => {
+            document.write(`${element} `);
+        });
+    </script>
+</body>
+</html> 

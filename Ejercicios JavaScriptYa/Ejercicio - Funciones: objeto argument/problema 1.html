@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Confeccionar una función que obtenga y retorne el mayor valor de una lista de enteros que 
+        le pasamos como parámetros.
+    -->
+<head>
+    <title>Problema 1 - Array: toString</title>
+</head>
+<body>
+    <script>
+        function mayor(){
+            let ma=Number.MIN_VALUE;
+            for(element of arguments){
+                if(ma<element) ma=element;
+            }
+            return ma;
+        }
+        document.write(mayor(1,2,5,7,1,6,2,6,4,8)+"<br>")
+    </script>
+</body>
+</html> 

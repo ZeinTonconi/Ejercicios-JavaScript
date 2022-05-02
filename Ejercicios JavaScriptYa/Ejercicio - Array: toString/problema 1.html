@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <!--
+       Crear un vector de 10 elementos. Inicializar los valores del vector cuando se crea. 
+       Inicializar dos variables que resulten de llamar primero al método toString() y la segunda 
+       variable inicializarla llamando al método join() sin parámetros. Mostrar un mensaje si el 
+       resultado de la ejecución de los dos métodos retorna el mismo valor (empleando un if para 
+       comparar los string)
+    -->
+<head>
+    <title>Problema 1 - Array: toString</title>
+</head>
+<body>
+    <script>
+        let vec=[2,3,4,5,1,55,6,2,7,4];
+        let s1=vec.join();
+        let s2=vec.toString();
+        document.write(s1+" "+s2+"<br>");
+        if(s1===s2){
+            document.write("Iguales");
+        }
+        else{
+            document.write("Diferentes");
+        }
+        
+    </script>
+</body>
+</html> 

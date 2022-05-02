@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <!--
+       Confeccionar una función que reciba un parámetro y defina una variable local. Definir dentro 
+       de la función que acabamos de crear una función anidada que contenga un parámetro.
+        En la función anidada imprimir el parámetro de la función que la contiene, el parámetro 
+        que tiene la función anidada y el valor de la variable local de la función principal.
+    -->
+<head>
+    <title>Problema 1 - Funcion anidada</title>
+</head>
+<body>
+    <script>
+        function funcion(x){
+            let lx=16;
+            function anidada(y){
+                document.write(`Variable: ${lx}<br>Parametro: ${x}<br>Parametro Anidado: ${y}<br>`)
+            }
+            anidada(15);
+        }
+        funcion(9);
+    </script>
+</body>
+</html> 

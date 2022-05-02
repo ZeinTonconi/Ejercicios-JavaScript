@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Crear un vector con 10 valores aleatorios comprendidos entre 1 y 500. Luego crear otros 
+        dos vectores y copiar los elementos menores a 250 en el segundo vector y los mayores o 
+        iguales a 250 en el tercer vector. Imprimir los tamaños del segundo y tercer vector. 
+        Imprimir los tres vectores.
+    -->
+<head>
+    <title>Problema 1 - Array Denso</title>
+</head>
+<body>
+    <script>
+        let al=new Array();
+        for(let i=0;i<10;i++){
+            al[i]=parseInt(Math.random()*500+1);
+        }    
+        let v1=new Array();
+        let v2=new Array();
+        (al).forEach(element => {
+            if(element<250) v1.push(element);
+            else v2.push(element);
+        });
+        for(element of v1){
+            document.write(`${element} `);
+        }
+        document.write("<br>");
+        for(element of v2){
+            document.write(`${element} `);
+        }
+    </script>
+</body>
+</html> 

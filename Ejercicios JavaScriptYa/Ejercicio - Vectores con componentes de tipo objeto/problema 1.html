@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <!--
+       Confeccionar una clase persona que permita almacenar el nombre y la edad. 
+       Luego definir un vector de 4 componentes de tipo persona. Imprimir el nombre 
+       de la persona de mayor edad; decir también si hay más de una persona con la edad mayor
+    -->
+<head>
+    <title>Problema 1 - Definición de varias clases</title>
+</head>
+<body>
+    <script>
+        class persona{
+            constructor(nombre,edad){
+                this.nombre=nombre;
+                this.edad=edad;
+            }
+            get getEdad(){
+                return this.edad;
+            }
+            get getNombre(){
+                return this.nombre;
+            }
+        }
+        let soc=new Array(new persona("Zein",18), new persona("Cristian",40), new persona("Hade",18), 
+                        new persona("Wendy",40));
+        soc.sort((a,b) => {
+            if(b.getEdad>a.getEdad) return 1;
+            else return -1;
+        });
+        document.write(soc[0].getNombre+"<br>");
+        let res=0;
+        soc.forEach(element => {
+            if(soc[0].getEdad==element.getEdad)
+                res++;
+        });
+        document.write(res);
+    </script>
+</body>
+</html> 

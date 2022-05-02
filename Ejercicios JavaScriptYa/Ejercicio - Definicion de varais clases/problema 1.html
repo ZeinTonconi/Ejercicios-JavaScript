@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Plantear una clase persona (que permita cargar por teclado su nombre y edad).
+        Por otro lado crear una clase empresa que tenga como atributo la edad tope para que una persona 
+        pueda ingresar como trabajador en la misma (60 años)
+        Confeccionar un pequeño programa en JavaScript que defina 3 objetos de la clase persona y 1 de 
+        la clase empresa. Mostrar cuántas de esas personas están inhabilidadas para ingresar como 
+        trabajadores de acuerdo a la edad tope
+    -->
+<head>
+    <title>Problema 1 - Definición de varias clases</title>
+</head>
+<body>
+    <script>
+        class persona{
+            constructor(nombre,edad){
+                this.nombre=nombre;
+                this.edad=edad;
+            }
+            get getEdad(){
+                return this.edad;
+            }
+        }
+        class empresa{
+            constructor(edad){
+                this.edadTope=edad;
+            }
+            puedeEntrar(person){
+                return person.getEdad<=this.edadTope;
+            }
+        }
+        let em=new empresa(60);
+        let p1=new persona("Mariel",15);
+        let p2=new persona("Mariam",80);
+        let p3=new persona("Alvaro",40);
+        let res=0;
+        if(em.puedeEntrar(p1)) res++;
+        if(em.puedeEntrar(p2)) res++;
+        if(em.puedeEntrar(p3)) res++;
+        document.write(res);
+    </script>
+</body>
+</html> 

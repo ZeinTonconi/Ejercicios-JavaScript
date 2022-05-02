@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Disponer dos campos de texto tipo password. Cuando se presione un botón mostrar si 
+        las dos claves ingresadas son iguales o no
+    -->
+<head>
+    <title>Problema 1 - Control PASSWORD</title>
+</head>
+<body>
+    <form>
+        <p>Ingrese su contrasenia<input type="password" id="password"></p>
+        <p>Vuelva a ingresar<input type="password" id="repassword"></p>
+        <p><input type="button" value="Enviar" onclick="verificar()"></p>
+    </form>
+    <script>
+        function verificar(){
+            let pass=document.getElementById("password").value;
+            let npass=document.getElementById("repassword").value;
+            if(pass===npass)
+                alert("Iguales!!");
+            else
+                alert("No son iguales :(");
+        }
+    </script>
+</body>
+</html>
