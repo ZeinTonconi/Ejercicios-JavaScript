@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Elaborar un programa que muestre un div de color rojo. Cuando se presione cambiar el color a amarillo y 
+        luego de soltar el botón del mouse volver a pintar de rojo.
+    -->
+<head>
+    <title>Problema 1 - mousedown y mouseup</title>
+</head>
+<body>
+    <div id="cuadrado" style="height:500px; width:500px; background-color:red"></div>
+    <script>
+        document.getElementById("cuadrado").addEventListener("mousedown",amarillo);
+        document.getElementById("cuadrado").addEventListener("mouseup",rojo);
+        function rojo(){
+            document.getElementById("cuadrado").style.backgroundColor="red";
+        }
+        function amarillo(){
+            document.getElementById("cuadrado").style.backgroundColor="yellow";
+        }
+    </script>
+</body>
+</html> 
