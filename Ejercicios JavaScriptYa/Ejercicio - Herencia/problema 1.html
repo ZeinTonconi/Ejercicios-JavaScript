@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Declarar una clase llamada Calculadora que reciba en el constructor dos valores.
+        Definir las responsabilidades de sumar, restar, multiplicar, dividir e imprimir.
+        Declarar luego una clase llamada CalculadoraCientifica que herede de Calculadora y 
+        añada las responsabilidades de calcular el cuadrado del primer número y la raíz cuadrada. 
+    -->
+<head>
+    <title>Problema 1 - Herencia</title>
+</head>
+<body>
+    <script>
+        class Calculadora{
+            constructor(x,y){
+                this.x=x;
+                this.y=y;
+            }
+            sumar(){
+                return this.x+this.y;
+            }
+            multiplicar(){
+                return this.x*this.y;
+            }
+            restar(){
+                return this.x-this.y;
+            }
+            dividir(){
+                return this.x/this.y;
+            }
+        }
+        class CalculadoraCientifica extends Calculadora{
+            constructor(x,y){
+                super(x,y)
+            }
+            alCuadrado(){
+                return this.x*this.x;
+            }
+            raiz(){
+                return Math.sqrt(this.x);
+            }
+        }
+        calculadora = new CalculadoraCientifica(6,7);
+        document.write(calculadora.alCuadrado()+"<br>");
+        document.write(calculadora.raiz()+"<br>");
+    </script>
+</body>
+</html> 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Plantear una clase ListaOrdenada. En el constructor definir un atributo de tipo vector vacío.
+        Luego definir dos métodos, uno que permita agregar elementos a la lista y otro que lo muestre en la página. 
+    -->
+<head>
+    <title>Problema 2 - Declaracion de clases</title>
+</head>
+<body>
+    <script>
+        class ListaOrdenada{
+            constructor(){
+                this.lista=new Array();
+            }
+            agregar(valor){
+                this.lista.push(valor);
+            }
+            imprimir(){
+                this.lista.forEach(element => {
+                    document.write(element+" ");
+                });
+                document.write("<br>");
+            }
+        }
+        lista=new ListaOrdenada();
+        lista.agregar(6);
+        lista.agregar(2);
+        lista.agregar(17);
+        lista.imprimir();
+        lista.agregar(78);
+        lista.imprimir();
+    </script>
+</body>
+</html> 

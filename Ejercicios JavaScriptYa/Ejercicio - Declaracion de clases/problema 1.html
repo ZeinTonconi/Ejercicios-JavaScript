@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Confeccionar una clase que permita administrar el nombre y la edad de una persona.
+        Mostrar los datos cargados. Imprimir un mensaje si es mayor de edad 
+    -->
+<head>
+    <title>Problema 1 - Declaracion de clases</title>
+</head>
+<body>
+    <script>
+        class Persona{
+            constructor(nombre, edad){
+                this.nombre=nombre;
+                this.edad=edad;
+            }
+            siEsMayorDeEdad(){
+                return this.edad>=18;
+            }
+        }
+        let persona=new Persona("Zein",10);
+        if(persona.siEsMayorDeEdad===true){
+            document.write("Mayor de Edad");
+        }
+        else{
+            document.write("Menor de Edad");
+        }
+    </script>
+</body>
+</html> 

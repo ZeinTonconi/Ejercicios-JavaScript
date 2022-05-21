@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Mostrar un elemento de tipo H1, luego cuando se ingrese con el mouse dentro del mismo 
+        cambiar el color a letra roja y color de fondo amarillo, luego cuando se mueva la flecha del 
+        mouse fuera del elemento volver al color original.
+    -->
+<head>
+    <title>Problema 1 - mouseover y mouseout</title>
+</head>
+<body>
+    <h1 style="font-color:green; background-color: red;" id="titulo">Hola!</h1>
+    <script>
+        document.getElementById("titulo").addEventListener("mouseover",dentro);
+        document.getElementById("titulo").addEventListener("mouseout",fuera);
+        function dentro(){
+            document.getElementById("titulo").style.color="red";
+            document.getElementById("titulo").style.backgroundColor="yellow";
+        }
+        function fuera(){
+            document.getElementById("titulo").style.color="green";
+            document.getElementById("titulo").style.backgroundColor="red";
+        }
+    </script>
+</body>
+</html> 

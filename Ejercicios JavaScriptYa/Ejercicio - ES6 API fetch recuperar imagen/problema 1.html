@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problema 1 - API Fetch recupera archivo de imagen</title>
+</head>
+<body>
+    <script>
+        // const myPromise = new Promise((resolve, reject) => {  
+        //     let condition;  
+        //     if() {    
+        //         resolve('Promise is resolved successfully.');  
+        //     } else {    
+        //     reject('Promise is rejected');  
+        //         }
+        // });
+        // myPromise.then((message) => {  
+        //     console.log(message);   
+        // });
+        fetch("https://rickandmortyapi.com/api/characters")
+            .then(response => response.json())
+            .then(datos =>{
+                for(let personaje of datos.results){
+                    document.write(`${personaje.id} ${personaje.name}<br>`);
+                    document.write(`<img src=${personaje.image}><br>`)
+                    console.log(personaje);
+                    // fetch(personaje.image)
+                    //     .then(response => response.blob())
+                    //     .then(datos => document.write(`<img src=${URL.createObjectURL(datos)}<br>`));
+                }
+
+            })
+            .catch(e => {
+                console.log("e");
+                document.write("<h1>Ocurrio un Error inesperado</h1>");
+            });       
+    </script>
+</body>
+</html> 

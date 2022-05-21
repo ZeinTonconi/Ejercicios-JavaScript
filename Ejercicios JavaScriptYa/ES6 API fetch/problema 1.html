@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Recuperar mediante el API fetch los datos y mostrarlos.
+    -->
+<head>
+    <title>Problema 1 - API Fetch</title>
+</head>
+<body>
+    <script>
+        fetch("https://rickandmortyapi.com/api/character")
+            .then(response => response.json())
+            .then(datos =>{
+                for(let personaje of datos.results){
+                    document.write(`${personaje.id} ${personaje.name}<br>`);
+                }
+            });       
+    </script>
+</body>
+</html> 

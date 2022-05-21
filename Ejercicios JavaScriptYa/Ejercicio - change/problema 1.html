@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Confeccionar un formulario que muestre un checkbox que cuando se tilde active un botón 
+    -->
+<head>
+    <title>Problema 1 - Evento change</title>
+</head>
+<body>
+    <input type="checkbox" id="check"> Acepta Terminos y Condiciones <br>
+    <input type="button" id="boton" value="Enviar" disabled>
+    <script>
+        document.getElementById("check").addEventListener("change",cambiar);
+        function cambiar(){
+            if(document.getElementById("check").checked === true)
+                document.getElementById("boton").disabled=false;
+            else
+                document.getElementById("boton").disabled=true;
+        }
+    </script>
+</body>
+</html> 
